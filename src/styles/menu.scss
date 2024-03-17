@@ -3,10 +3,13 @@
 
 
 .Menu-container {
+  width: 100%;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid $border;
     @include fonts.upper;
+    position: fixed;
+    z-index: 100;
 
 
     .Menu-logo {
@@ -46,15 +49,17 @@
 
 @media (max-width: 1023px) {
     /* CSS styles for Portrait Tablets */
-    .Menu-mobile {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        .three { width: 5%; }
+    .Menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .Menu-mobile {
+        width: 7%;
+        // .three { width: 10%; }
         .col {
-            display: block;
-            float:left;
-            margin: 1% 0 1% 1.6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .col:first-of-type {
@@ -62,7 +67,7 @@
         }
         
         .three{
-            padding: 10px;
+            // padding: 10px;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -123,9 +128,16 @@
             }
           }
         }
-    
-    .Menu-container {
+
+      .Menu-links {
         display: none;
+      }
+
+      .Menu-links.is-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+      }
     }
   }
 

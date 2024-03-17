@@ -9,24 +9,25 @@ export default function Menu() {
             setActive(!isActive)
         }
 
-        return <div className='Menu-mobile'>
-            <div className="three col">
-                <div className={`hamburger ${isActive ? "is-active" : ""}`} id="hamburger-1" onClick={toggleClass}>
-                    <span className="line"></span>
-                    <span className="line"></span>
-                    <span className="line"></span>
-                </div>
-        </div>
-            <div className='Menu-container'>
-                <a className='Menu-logo' href="/"><img src="../Vector.jpg" alt=""/></a>
-                <div className='Menu-links'>
+        return <div className='Menu-container'>
+                    <a className='Menu-logo' href="/"><img src="../Vector.jpg" alt=""/></a>
+                    <div className='Menu-mobile'>
+                    <div className="three col">
+                        <div className={`hamburger ${isActive ? "is-active" : ""}`} id="hamburger-1" onClick={toggleClass}>
+                            <span className="line"></span>
+                            <span className="line"></span>
+                            <span className="line"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <div className={`Menu-links ${isActive ? "is-active" : ""}`} onClick={toggleClass}>
                     <a href="/news">Новости</a>
                     <a href="/questions">Вопросы</a>
                     <a href="/knowledgebase">База знаний</a>
                     <a href="/companies">Компании</a>
-            </div>
-            </div>
-        </div>
+                    </div>
+                </div>
+            
 }
 
 
