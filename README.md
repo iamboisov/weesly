@@ -3,6 +3,11 @@
 
 ## Доступные скрипты
 
+Клонируем репозиторий:
+```
+git clone https://github.com/HSEADC/Weesly.git
+```
+
 Для запуска проекта локально:
 
 ### `npm install`
