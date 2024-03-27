@@ -57,3 +57,9 @@
     color: $gray;
     margin: 0 0 15px;
 }
+
+@mixin ordinary_text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}

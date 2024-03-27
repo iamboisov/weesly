@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import './styles/post.scss'
 import Menu from './Menu.jsx'
 import Footer from './Footer.jsx';
 import news from './data.js';
@@ -25,10 +26,10 @@ function Post() {
                     {article.related.map((rel) => {
                         const related_article_index = Number(rel.slice(7)) - 1
                         const related_article = news[related_article_index]
-                        return <>
+                        return <div className='related-item'>
                                 <img src={require(`${related_article.img}`)} alt="" />
-                                <h4>{related_article.header}</h4>
-                        </>
+                                <h4><a href={rel}>{related_article.header}</a></h4>
+                        </ div>
                     })}
                 </div>
             </div>
