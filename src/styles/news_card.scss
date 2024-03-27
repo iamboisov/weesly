@@ -8,9 +8,12 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 60px;
+    padding: 0 60px;
+    margin-top: 60px;
+
 
     .news-text {
+        width: 45%;
         .text-top {
             p {
                 @include fonts.text
@@ -18,6 +21,7 @@
 
             h3 {
                 margin-bottom: 60px;
+                @include fonts.upper
             }
         }
 
@@ -31,26 +35,86 @@
     }
 
     .news-img {
-        width: 40%;
+        width: 50%;
+
         
         img {
             width: 100%;
+            height: 25vw;
+            object-fit: cover;
+            object-position: center;
             border-radius: 30px;
+            
         }
     }
 }
 
 
-@media (max-width: 1024px) {
-
-}
-
-
 @media (max-width: 876px) {
+    .news-card {
+        padding: 0 30px;
+        margin-top: 30px;
+        .news-text {
+            width: 48%;
+            .text-top {
+                p {
+                    font-size: 16px;
+                }
 
+                h3 {
+                    font-size: 22px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .news-img {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 30vw;
+            }
+        }
+    }
 }
 
 
 @media (max-width: 480px) {
+    .news-card {
+        flex-direction: column-reverse;
+        padding: 0 30px;
+        margin-bottom: 30px;
+        .news-text {
+            width: 90%;
+            padding-left: 15px;
+            .text-top {
+                p {
+                    font-size: 16px;
+                }
 
+                h3 {
+                    font-size: 22px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .news-img {
+            width: 100%;
+            margin-bottom: 15px;
+            img {
+                width: 100%;
+                height: 45vw;
+            }
+        }
+    }
 }

@@ -19,30 +19,33 @@
 }
 
 @mixin h1 {
-    font-size: 72px;
+    font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
+    font-size: 62px;
     line-height: 115%;
-    @include upper
 }
 
 @mixin h2 {
-    font-size: 52px;
-    line-height: 115%;
-    margin: 0;
-    @include upper
-}
-
-@mixin h3 {
+    font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
     font-size: 42px;
     line-height: 115%;
     margin: 0;
-    @include upper
+}
+
+@mixin h3 {
+    font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 115%;
+    margin: 0;
+
 }
 
 @mixin h4 {
+    font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
     font-size: 22px;
+    font-weight: 600;
     line-height: 115%;
     margin: 0;
-    @include upper
+
 }
 
 
