@@ -1,13 +1,39 @@
-import news from './data.js'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import Menu from './Menu.jsx'
+import Footer from './Footer.jsx';
+import news from './data.js';
+
 
 function Post() {
 
-    const post_params = useParams()
-    const article_index = Number(post_params.url.toString().slice(-1)) - 1
+    const post_params = useParams();
+    const article_index = Number(post_params.url.toString().slice(7)) - 1;
+    let article = news[article_index]
     return(
-            <div>{news[article_index].tag}</div>
-        
+            
+            <>
+            <Menu />
+            <div className="news-container">
+                <div className="news-body">
+                    <div className="date">{article.date}</div>
+                    <h2>{article.header}</h2>
+                    <img src={require(`${article.img}`)} alt="" srcset="" />
+                    <p className="text">{article.text}</p>
+                </div>
+
+                <div className="related-news">
+                    {article.related.map((rel) => {
+                        const related_article_index = Number(rel.slice(7)) - 1
+                        const related_article = news[related_article_index]
+                        return <>
+                                <img src={require(`${related_article.img}`)} alt="" />
+                                <h4>{related_article.header}</h4>
+                        </>
+                    })}
+                </div>
+            </div>
+            <Footer />
+            </>
     )
 }
 

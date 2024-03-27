@@ -4,6 +4,7 @@ import About from "./About.jsx";
 import KnowledgeBase from './KnowledgeBase.jsx';
 import Companies from './Companies.jsx';
 import Post from './Post.jsx';
+import ErrorEl from './ErrorPage.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,10 +20,11 @@ const routeDefinitions = createRoutesFromElements(
     
     <Route path="/" element={<Main />} />
     <Route path="/news" element={<News />} />
-    <Route path="news/:url" element={<Post />} />
+    <Route path="news/:url" element={<Post />} errorElement={<ErrorEl />}/>
     <Route path="/knowledgebase" element={<KnowledgeBase />} />
     <Route path="/companies" element={<Companies />} />
     <Route path="/about" element={<About />} />
+
 
 
     <Route path={`/news/:articleId`} element={<News />} />
