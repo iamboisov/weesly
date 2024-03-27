@@ -1,0 +1,77 @@
+@use './fonts' as fonts;
+@import './colors';
+
+// Menu
+@mixin uppercase {
+    a {
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $blue;
+        font-weight: 400;
+    }
+
+}
+
+@mixin uppercase_hover {
+
+    .circle {
+        border: 1px $blue solid;
+    }
+
+    a {
+        color: $blue;
+        opacity: .5;
+    }
+    
+}
+
+
+@mixin uppercase_active {
+        .circle {
+            background-color: $blue;
+        }
+}
+
+@mixin uppercase_mobile {
+    .circle {
+        border: 1px $bg solid;
+    }
+
+    a {
+        color: $bg;
+        font-size: 32px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+@mixin uppercase_mobile_active {
+    .circle {
+        background-color: $bg;
+    }
+}
+
+
+@mixin default_link {
+    color: $gray;
+    text-decoration: none;
+}
+
+@mixin default_link_hover {
+    color: $blue;
+}
+
+
+// Links
+@mixin card_link {
+    font-size: 18px;
+    color: $blue;
+    text-decoration: none;
+    @include fonts.upper
+
+}
+
+@mixin card_link_hover {
+    color: $gray
+}

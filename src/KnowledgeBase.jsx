@@ -1,12 +1,14 @@
 import Menu from './Menu.jsx'
+import Footer from './Footer.jsx'
 import './styles/menu.scss';
 
 function KnowledgeBase() {
     return(
-        <div>
-            <Menu />
+        <>
+            <Menu active={"kb"}/>
             <div>Knowledge Base</div>
-        </div>
+            <Footer />
+        </>
     )
   
   }

@@ -1,13 +1,15 @@
-import Menu from './Menu.jsx'
+import Menu from './Menu.jsx';
+import Footer from './Footer.jsx';
 import './styles/menu.scss';
 
 
 function Companies() {
     return(
-        <div>
-            <Menu />
+        <>
+            <Menu active={"comp"}/>
             <div>Companies</div>
-        </div>
+            <Footer />
+        </>
     )
   
   }

@@ -1,143 +1,151 @@
 @use './fonts' as fonts;
+@use './links' as link;
 @import './colors';
 
 
-.Menu-container {
-  width: 100%;
+.menu-links-mobile {
+    display: none;
+}
+
+.menu-container {
+    overflow-x: hidden;
+    padding: 30px;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid $border;
-    @include fonts.upper;
-    position: fixed;
-    z-index: 100;
+    align-items: center;
 
+    .logo-container {
+        width: 150px;
 
-    .Menu-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        width: 5%;
-        border-right: 1px solid $border;
+        img {
+            width: 100%;
+        }
     }
 
-    .Menu-links {
-        width: 95%;
+    .menu-links {
+        width: 85%;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
         
-
-        & a {
+        .menu-item {
             display: flex;
+            flex-direction: row;
+            margin-left: 30px;
             align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            @include fonts.link;
-            border-right: 1px solid $border;
+            @include link.uppercase;
+            
+
+            .circle {
+                border: 1px $blue solid;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+            }
+
+            a {
+                margin-left: 5px;
+                
+            }
+
+            
         }
 
-        & a:hover {
-            @include fonts.link_hover
+        .menu-item:hover {
+            @include link.uppercase_hover;
         }
+
+        .menu-item.active-page {
+            @include link.uppercase_active;
+        }
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
 
 
-@media (max-width: 1023px) {
+
+
+@media (max-width: 876px) {
     /* CSS styles for Portrait Tablets */
-    .Menu-container {
-      display: flex;
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .menu-container {
+        display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      .Menu-mobile {
-        width: 7%;
-        // .three { width: 10%; }
-        .col {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .col:first-of-type {
-          margin-left: 0;
-        }
-        
-        .three{
-            // padding: 10px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            color: #ecf0f1;
-            text-align: center;
-          }
-          
-          .hamburger .line{
-            width: 30px;
-            height: 4px;
-            background-color: $default_dark;
-            display: block;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
-          
-          .hamburger:hover{
-            cursor: pointer;
-          }
-          
-          
-          #hamburger-1.is-active .line:nth-child(2){
-            opacity: 0;
-          }
-          
-          #hamburger-1.is-active .line:nth-child(1){
-            -webkit-transform: translateY(9px) rotate(45deg);
-            -ms-transform: translateY(9px) rotate(45deg);
-            -o-transform: translateY(9px) rotate(45deg);
-            transform: translateY(9px) rotate(45deg);
-          }
-          
-          #hamburger-1.is-active .line:nth-child(3){
-            -webkit-transform: translateY(-9px) rotate(-45deg);
-            -ms-transform: translateY(-9px) rotate(-45deg);
-            -o-transform: translateY(-9px) rotate(-45deg);
-            transform: translateY(-9px) rotate(-45deg);
-          }
-        
-          @keyframes smallbig{
-            0%, 100%{
-              -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-              -o-transform: scale(1);
-              transform: scale(1);
-            }
-          
-            50%{
-              -webkit-transform: scale(0);
-              -ms-transform: scale(0);
-              -o-transform: scale(0);
-              transform: scale(0);
-            }
-          }
+      padding: 30px 30px;
+
+        .menu-links {
+            display: none;
         }
 
-      .Menu-links {
-        display: none;
-      }
-
-      .Menu-links.is-active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-      }
+        .hamburger {
+            display: flex;
+        }
     }
-  }
+    .opened {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: $blue;
+        display: flex;
+        // transform: translateX(100%);
+
+        .mobile-container {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .hamburger {
+                align-self: flex-end;
+                width: 5%;
+                padding: 30px;
+    
+            }
+    
+            .menu-item {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 30px;
+                padding-left: 30px;
+                @include link.uppercase_mobile;
+                
+    
+                .circle {
+                    border: 1px $bg solid;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                }
+    
+                a {
+                    margin-left: 5px;
+                    
+                }
+    
+                
+            }
+
+            .menu-item.active-page {
+                @include link.uppercase_mobile_active;
+            }
+        }
+
+    }
+    
+} 
 

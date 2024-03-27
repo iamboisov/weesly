@@ -1,11 +1,13 @@
-import Menu from './Menu.jsx'
+import Menu from './Menu.jsx';
+import Footer from './Footer.jsx';
 import './styles/menu.scss';
 
 function Main() {
     return(
         <div>
-            <Menu />
-            <div>Main</div>
+            <Menu active={true}/>
+            <div>--------------------------------------------</div>
+            <Footer />
         </div>
     )
   

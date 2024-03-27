@@ -1,6 +1,7 @@
 @use './Colors.scss';
+@use './fonts' as fonts;
 
-.Button {
-    padding: 20px;
-    background-color: black;
+body {
+    overflow-x: hidden;
 }
+

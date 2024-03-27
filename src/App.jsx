@@ -1,6 +1,6 @@
 import Main from './Main.jsx';
 import News from './News.jsx';
-import Questions from "./Questions";
+import About from "./About.jsx";
 import KnowledgeBase from './KnowledgeBase.jsx';
 import Companies from './Companies.jsx';
 import {
@@ -17,9 +17,9 @@ const routeDefinitions = createRoutesFromElements(
   <Route>
     <Route path="/" element={<Main />} />
     <Route path="/news" element={<News />} />
-    <Route path="/questions" element={<Questions />} />
     <Route path="/knowledgebase" element={<KnowledgeBase />} />
     <Route path="/companies" element={<Companies />} />
+    <Route path="/about" element={<About />} />
   </Route>
 );
 
