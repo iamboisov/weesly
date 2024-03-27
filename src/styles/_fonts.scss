@@ -53,6 +53,7 @@
 
 @mixin text {
     font-family: 'Inter', sans-serif;
+    line-height: 1.5;
     font-size: 18px;
     color: $gray;
     margin: 0 0 15px;

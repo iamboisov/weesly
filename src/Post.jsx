@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import './styles/post.scss'
 import Menu from './Menu.jsx'
 import Footer from './Footer.jsx';
-import news from './data.js';
+import {news} from './data.js';
 
 
 function Post() {

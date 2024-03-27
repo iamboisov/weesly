@@ -1,0 +1,76 @@
+@use './fonts' as fonts;
+@use './links' as link;
+@import './colors';
+
+.kb-body {
+
+    display: block;
+    padding: 0 60px;
+    .kb-marketing, .kb-finance, .kb-management {
+        margin-bottom: 120px;
+        .marketing-header {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+            height: 10vw;
+
+            h2 {
+                width: 100%;
+                @include fonts.h2;
+                @include fonts.upper   
+            }
+
+            .marketing-header-text {
+                width: 100%;
+                @include fonts.text;
+
+                a {
+                    @include link.card_link
+                }
+            }
+        }
+
+        .marketing-cards {
+            // display: flex;
+            // flex-direction: row;
+            // align-items: flex-start;
+            // justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+            
+            .marketing-card {
+                
+                width: 100%;
+                height: 100%;
+                border: 1px $gray solid;
+                border-radius: 30px;
+                
+                .marketing-card-img {
+                    img {
+                        width: 100%;
+                        height: 20vw;
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: 30px 30px 0px 0px;
+                    }
+                }
+
+                .marketing-card-text {
+                    padding: 15px 30px;
+                    
+
+                    h2 {
+                        @include fonts.h2;
+                        @include fonts.upper;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        @include fonts.text
+                    }
+                }
+            }
+        }
+    }
+}

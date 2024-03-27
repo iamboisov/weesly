@@ -5,7 +5,7 @@ import Footer from './Footer.jsx';
 import './styles/menu.scss';
 import './styles/news_card.scss';
 import './styles/news.scss';
-import news from './data.js'
+import {news} from './data.js'
 
 function News() {
     return(
