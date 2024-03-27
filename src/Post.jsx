@@ -3,9 +3,10 @@ import { useParams } from 'react-router-dom';
 
 function Post() {
 
-    const postParams = useParams()
+    const post_params = useParams()
+    const article_index = Number(post_params.url.toString().slice(-1)) - 1
     return(
-            <div>Hello</div>
+            <div>{news[article_index].tag}</div>
         
     )
 }
