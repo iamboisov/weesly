@@ -15,7 +15,7 @@
     .marketing-card {
         
         width: 100%;
-        // height: 100%;
+        height: 100%;
         border: 1px $gray solid;
         border-radius: 30px;
         
@@ -42,6 +42,27 @@
 
             p {
                 @include fonts.text
+            }
+        }
+    }
+};
+
+@media (max-width: 876px) {
+    .marketing-articles {
+        padding: 0 30px;
+        display: block;
+        .marketing-card {
+            margin-bottom: 30px;
+            .marketing-card-img {
+                img {
+                    height: 40vw;
+                }
+            }
+
+            .marketing-card-text {
+                h2 {
+                    font-size: 22px;
+                }
             }
         }
     }
