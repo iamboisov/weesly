@@ -6,7 +6,7 @@ import Marketing from './Marketing.jsx';
 // import Finance from './Finance.jsx';
 // import Management from './Management.jsx';
 // import Companies from './Companies.jsx';
-// import Article from './Article.jsx';
+import Article from './Article.jsx';
 import Post from './Post.jsx';
 import PageInProgress from './PageInProgress.jsx';
 import ErrorEl from './ErrorPage.jsx';
@@ -30,7 +30,7 @@ const routeDefinitions = createRoutesFromElements(
     <Route path="/knowledgebase/marketing" element={<Marketing />} />
     <Route path="/knowledgebase/finance" element={<PageInProgress active="kb"/>} />
     <Route path="/knowledgebase/management" element={<PageInProgress active="kb"/>} />
-    <Route path="/knowledgebase/marketing/:url" element={<PageInProgress active="kb"/>} />
+    <Route path="/knowledgebase/marketing/:url" element={<Article active="kb"/>} />
     <Route path="/companies" element={<PageInProgress active="comp"/>} />
     <Route path="/about" element={<PageInProgress active="about"/>} />
 

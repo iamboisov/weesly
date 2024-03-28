@@ -87,7 +87,8 @@ let news = [
 
 
 let articles = {
-    "marketing": [{
+    "marketing": [
+        {
         "url": "article1",
         "header": "Контент маркетинг и с чем его едят",
         "sections": [{
