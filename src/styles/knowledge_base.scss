@@ -36,10 +36,6 @@
         }
 
         .marketing-cards {
-            // display: flex;
-            // flex-direction: row;
-            // align-items: flex-start;
-            // justify-content: space-between;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2vw;
@@ -65,8 +61,8 @@
                     padding: 15px 30px;
                     
 
-                    h2 {
-                        @include fonts.h2;
+                    h4 {
+                        @include fonts.h4;
                         @include fonts.upper;
                         margin-bottom: 15px;
                     }
@@ -89,7 +85,7 @@
             .marketing-header {
                 display: block;
                 padding-left: 30px;
-                h2 {
+                h4 {
                     font-size: 22px;
                     margin-bottom: 15px;
                 }

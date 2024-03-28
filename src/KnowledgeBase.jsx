@@ -26,7 +26,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/marketing/1.jpeg')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Показатели метрики</h2>
+                                <h4>Показатели метрики</h4>
                                 <p>Как работают поисковые системы, ранжирование страниц, отображение в поиске, оптимизация копирайтинга и многое другое</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/marketing/13.jpg')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Как пользователи попадают на сайт?</h2>
+                                <h4>Как пользователи попадают на сайт?</h4>
                                 <p>СММ. Что это такое и для чего это нужно бизнесу.</p>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/finance/8.png')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Основы учета</h2>
+                                <h4>Основы учета</h4>
                                 <p>Основы финансового учета для предпринимателей. Эффективное управление финансами.</p>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/finance/14.png')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Финансовое планирование</h2>
+                                <h4>Финансовое планирование</h4>
                                 <p>Долгосрочное финансовое планирование. Управление корпоративными финансами. Налоги.</p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/management/7.jpg')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Построение команд</h2>
+                                <h4>Построение команд</h4>
                                 <p>Как строить эффективные команды и привлекать лучшие таланты.</p>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ function KnowledgeBase() {
                                 <img src={require('./images/management/12.jpg')} alt="" srcset="" />
                             </div>
                             <div className="marketing-card-text">
-                                <h2>Управление конфликтами</h2>
+                                <h4>Управление конфликтами</h4>
                                 <p>Управление конфликтами в коллективе. Решение споров и конфликтов между.</p>
                             </div>
                         </div>
