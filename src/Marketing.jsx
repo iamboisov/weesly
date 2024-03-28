@@ -6,7 +6,9 @@ import './styles/marketing.scss';
 
 function Marketing() {
     return <>
-        Marketing
+        <div className="marketing-articles">
+            <div className="marketing-card"></div>
+        </div>
     </>
 }
 

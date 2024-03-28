@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer.jsx'
 import './styles/menu.scss';
 import './styles/knowledge_base.scss';
-import articles from './data.js';
+// import articles from './data.js';
 
 function KnowledgeBase() {
     return(
